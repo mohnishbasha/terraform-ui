@@ -3,8 +3,8 @@
   http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.mkyong</groupId>
-	<artifactId>spring-boot-ajax-example</artifactId>
+	<groupId>com.glitterlabs</groupId>
+	<artifactId>terraform-ui</artifactId>
 	<packaging>jar</packaging>
 	<version>1.0</version>
 
