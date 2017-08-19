@@ -3,7 +3,8 @@ user interface to run terraform (tf) files.
 
 ## How to run?
 
-* Place the terraform executable (terraform.exe) in resource directory of project (src\main\resources)
+* Download terraform binary from terraform.io
+* Place the terraform binary|executable (terraform|terraform.exe) in resource directory of project (src\main\resources)
 #### Clone the version of terraform-ui you want to run.
 ```
 git clone https://github.com/mohnishbasha/terraform-ui.git
