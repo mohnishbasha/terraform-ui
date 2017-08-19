@@ -1,0 +1,205 @@
+@CHARSET "ISO-8859-1";
+
+.top-nav {
+	background-color: rgba(24,188,156,.9);
+}
+
+#container {
+	min-height: 300px;
+	padding:15px;
+}
+
+.padded30{
+	padding: 30px;
+}
+.top-padded30{
+	padding-top: 30px;
+}
+.width50Per{
+	width: 50%;
+}
+
+.drag-container {
+	background-color: #e0d9d9;
+}
+@media screen and (min-width: 1024px) {
+    .fixed-height{
+        min-height:250px;
+    }
+}
+.project-element{
+	padding-bottom: 5px;
+}
+
+i.round {
+    padding: 18px 18px;
+    margin-left: 5px;
+    display: inline-block;
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+    border-radius: 100px;
+    -moz-box-shadow: 0px 0px 2px #888;
+    -webkit-box-shadow: 0px 0px 2px #888;
+    box-shadow: 0px 0px 4px #49a93d;
+}
+.content-box{
+    margin-bottom: 30px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 5px;
+    border-left: 1px solid #eee;
+    border-top: 1px solid #eee;
+    border-right: 2px solid #eee;
+    border-bottom: 2px solid #eee;
+}
+header {
+    width: 100%;
+    display: inline-block;
+    border-bottom: 0px solid transparent;
+    vertical-align: top;
+    position: relative;
+    min-height: 50px;
+}
+header .title {
+    margin-top: 2px;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-size: 19px;
+    padding-left: 30px;
+    line-height: 30px;
+    color: #676767;
+    font-weight: 400;
+    display: inline-block;
+}
+.actions a {
+    color: #222;
+    font-size: 12px;
+    margin-left: 0px;
+    padding: 5px;
+    cursor: hand;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.app-btn {
+  background: #428bca;
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 12px;
+  padding: 8px 12px 8px 12px;
+  text-decoration: none;
+}
+.table td, .table th {
+    border: none;
+}
+
+.table-wrap {
+    margin-bottom: 10px;
+    border: 1px solid #dfe2e5;
+    border-top: 0;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+table.files {
+    width: 100%;
+    background: #fff;
+    border-radius: 2px;
+}
+
+
+.breadcrumb-arrow {
+    height: 36px;
+    padding: 0;
+    line-height: 36px;
+    list-style: none;
+    background-color: #e6e9ed
+}
+.breadcrumb-arrow li:first-child button {
+    border-radius: 4px 0 0 4px;
+    -webkit-border-radius: 4px 0 0 4px;
+    -moz-border-radius: 4px 0 0 4px
+}
+.breadcrumb-arrow li, .breadcrumb-arrow li button, .breadcrumb-arrow li span {
+    display: inline-block;
+    vertical-align: top
+}
+.breadcrumb-arrow li:not(:first-child) {
+    margin-left: -5px
+}
+.breadcrumb-arrow li+li:before {
+    padding: 0;
+    content: ""
+}
+.breadcrumb-arrow li span {
+    padding: 0 10px
+}
+.breadcrumb-arrow li button, .breadcrumb-arrow li:not(:first-child) span {
+    height: 36px;
+    padding: 0 10px 0 25px;
+    line-height: 36px
+}
+.breadcrumb-arrow li:first-child button {
+    padding: 0 10px
+}
+.breadcrumb-arrow li button {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    background-color: #3bafda;
+    border: 1px solid #3bafda
+}
+.breadcrumb-arrow li:first-child button {
+    padding-left: 10px
+}
+.breadcrumb-arrow li button:after, .breadcrumb-arrow li button:before {
+    position: absolute;
+    top: -1px;
+    width: 0;
+    height: 0;
+    content: '';
+    border-top: 18px solid transparent;
+    border-bottom: 18px solid transparent
+}
+.breadcrumb-arrow li button:before {
+    right: -10px;
+    z-index: 3;
+    border-left-color: #3bafda;
+    border-left-style: solid;
+    border-left-width: 11px
+}
+.breadcrumb-arrow li button:after {
+    right: -11px;
+    z-index: 2;
+    border-left: 11px solid #2494be
+}
+.breadcrumb-arrow li button:focus, .breadcrumb-arrow li button:hover {
+    background-color: #4fc1e9;
+    border: 1px solid #4fc1e9
+}
+.breadcrumb-arrow li button:focus:before, .breadcrumb-arrow li button:hover:before {
+    border-left-color: #4fc1e9
+}
+.breadcrumb-arrow li button:active {
+    background-color: #2494be;
+    border: 1px solid #2494be
+}
+.breadcrumb-arrow li button:active:after, .breadcrumb-arrow li button:active:before {
+    border-left-color: #2494be
+}
+
+@media(min-width:1170px) {
+ .modal-dialog {
+    width: 900px;
+    margin: 30px auto;
+ }
+}
+
+.fa {
+	color:#49a93d;
+}
+
+.apply-action[disabled]{
+ 	background:#ddd;
+}

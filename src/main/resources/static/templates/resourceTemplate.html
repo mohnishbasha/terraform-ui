@@ -1,0 +1,61 @@
+
+<div class="content-box">
+ 
+ <div class="top-padded30">
+ 		<div class="table-wrap">
+ 		<div>
+			  <ol class="breadcrumb breadcrumb-arrow">
+			    <% _.each(path, function(pathSub,index) { %>
+			    	<% if ( path.length == (index+1)) { %> 
+			    	<li class="active"><span><%= pathSub%></span></li> 
+					<% } else { %>
+				    <li><button class="resource-class btn-link"><%= pathSub%></button></li>
+				    <% } %>
+				<% }); %>
+			  	</ol>
+			  <div class="dropdown pull-right">
+				  <button class="btn btn-primary dropdown-toggle pull-right app-btn active" type="button" data-toggle="dropdown" style="margin-bottom:10px;margin-right: 10px;">Add</button>
+				  <ul class="dropdown-menu dropdown-menu-right">
+				    <li><button class="btn-link add-file">File</button></li>
+				    <li><button class="btn-link add-directory">Directory</button></li>
+				  </ul>
+			</div> 
+		 </div>
+	 			<table class="table table-hover">
+				    <tbody>
+				    <% _.each(resources, function(resource) { %>
+				      <tr>
+					    	<td> <% if (resource.file) { %>
+					    			<i class="fa fa-file"></i> 
+					    	     <% }  else {%>
+					    	     	<i class="fa fa-folder"></i> 
+					    	     <% } %>
+					    	<button class="resource-class btn-link" data-file="<%= resource.file%>"><%= resource.name%></button></td>
+				      </tr>
+					<% }); %>
+				    </tbody>
+			   </table>
+ 		</div>
+ </div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="newFileModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+      	<span>Resource</span>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body">
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary modal-save">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+ 
+</div>

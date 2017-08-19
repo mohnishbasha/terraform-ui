@@ -1,0 +1,23 @@
+
+<div class="content-box">
+ <div id="show_projects" class="top-padded30">
+ 	<div class="row">
+ 		<div class="wrapper">
+ 			<div class="col-sm-4 col-md-2 col-xs-6">
+				<div id="project_div" class="drag-container fixed-height">	
+				<div id="dragitemslistcontainer">
+	 				<% _.each(resources, function(resource) { %>
+		        	 <div class="project-element" id="<%= resource.name %>" draggable="true"><span><%= resource.name %></span></div>
+					<% }); %>
+	 			</div>
+				</div>
+ 			</div>
+ 			<div class="col-sm-8 col-md-10 col-xs-6">
+	 			<div id='drag-zone' class="drag-container fixed-height" style="padding: 10px;">
+	 			</div>
+	 			 <button id="save-plan" type="submit" class="btn btn-primary pull-right" style="margin-top: 5px;">Save</button>
+ 			</div>
+ 		</div>
+ 	</div>
+ </div>
+</div>

@@ -1,0 +1,76 @@
+define([
+  'jquery',
+  'underscore',
+  'backbone',
+  'dnd',
+  'util',
+  'collections/project/ProjectResourceCollection',
+  'text!/templates/projectTemplate.html',
+  'text!/templates/aws/aws_provider.html'
+], function($, _, Backbone, dnd, Util, ProjectResourceCollection, projectTemplate,defaultProvider){
+  var projectView = Backbone.View.extend({
+    el: $('#container-content'),
+    events : {
+		'click #save-plan' : 'savePlan'
+	},
+    initialize: function (type, id) {
+		 this.cloudType=type;
+		 this.id=id;
+		 this.collection = new ProjectResourceCollection({ 'cloudType': this.cloudType});
+    },
+    render: function(){
+    	var that = this;
+    	this.collection.fetch({
+			success:function(model){
+				var data = {"resources": model.toJSON()};
+				that.compiledTemplate = _.template(projectTemplate)(data);
+				that.$el.html(that.compiledTemplate);
+				if(that.cloudType ==='aws'){
+				 $('#drag-zone').append(defaultProvider)
+				}
+				that.initDragDrop();
+			},
+			error:function(response){
+				console.log("Error is occured while fetching the data:"+response);
+			}
+		});	
+    },
+    initDragDrop: function(){
+    	$("#dragitemslistcontainer .project-element").on('dragstart',function(event) {
+	        event.originalEvent.dataTransfer.setData('template_id',$(event.currentTarget).attr('id'));
+	    }).on('dragend',function(event) {
+	        
+	    });
+        $('.wrapper').find('*').on('dragenter',function(event) {
+            event.preventDefault();
+            event.stopPropagation();
+        }).on('dragover',function(event) {
+            event.preventDefault();
+            event.stopPropagation();
+        });
+        $('#drag-zone').on('drop',function(event,data) {
+            event.preventDefault();
+            event.stopPropagation();
+		    Util.templateByName(event.originalEvent.dataTransfer.getData('template_id'));
+        });
+    }, 
+    savePlan: function(e){debugger;
+    $.ajax({
+    	  url:"/project/"+this.id,
+    	  type:"POST",
+    	  data:JSON.stringify($('form').serializeArray()),
+    	  contentType:"application/json; charset=utf-8",
+    	  dataType:"json",
+    	  success: function(result){
+    		  alert(result);
+    	  }
+    	})
+    JSON.stringify( $('form').serializeArray() );	
+	},  
+    onClose: function(){
+		this.stopListening();
+		this.collection.unbind("change", this.render);
+	  }
+  });
+  return projectView;
+});
