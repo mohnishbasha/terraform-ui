@@ -1,4 +1,4 @@
-package com.glitterlabs.project.util;
+package com.glitterlabs.terraformui.util;
 
 import org.apache.commons.text.RandomStringGenerator;
 

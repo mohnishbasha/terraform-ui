@@ -1,4 +1,4 @@
-package com.glitterlabs.project.util;
+package com.glitterlabs.terraformui.util;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package com.glitterlabs.project.controller;
+package com.glitterlabs.terraformui.controller;
 
 import java.io.File;
 import java.io.IOException;
@@ -19,8 +19,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.glitterlabs.project.model.Resource;
-import com.glitterlabs.project.service.ResourceService;
+import com.glitterlabs.terraformui.model.Resource;
+import com.glitterlabs.terraformui.service.ResourceService;
 
 @RestController
 public class ResourceController {

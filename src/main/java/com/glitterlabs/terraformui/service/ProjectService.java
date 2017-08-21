@@ -1,4 +1,4 @@
-package com.glitterlabs.project.service;
+package com.glitterlabs.terraformui.service;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -14,13 +14,13 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.glitterlabs.project.dao.CloudRepository;
-import com.glitterlabs.project.dao.ProjectRepository;
-import com.glitterlabs.project.model.Cloud;
-import com.glitterlabs.project.model.Project;
-import com.glitterlabs.project.model.Project.ProjectStatus;
-import com.glitterlabs.project.util.GlobalProperties;
-import com.glitterlabs.project.util.ResourceNameGenerator;
+import com.glitterlabs.terraformui.dao.CloudRepository;
+import com.glitterlabs.terraformui.dao.ProjectRepository;
+import com.glitterlabs.terraformui.model.Cloud;
+import com.glitterlabs.terraformui.model.Project;
+import com.glitterlabs.terraformui.model.Project.ProjectStatus;
+import com.glitterlabs.terraformui.util.GlobalProperties;
+import com.glitterlabs.terraformui.util.ResourceNameGenerator;
 
 /**
  * The Class CloudProjectService.

@@ -1,10 +1,9 @@
-package com.glitterlabs.project.util;
+package com.glitterlabs.terraformui.util;
 
-import java.io.IOException;
+import java.nio.file.Paths;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
-import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -14,6 +13,17 @@ public class GlobalProperties {
 	@Value("${directory.root}")
 	private String directoryPath;
 
+	@Value("${terraform.exe.path}")
+	private String terraformExePath;
+
+	public String getTerraformExePath() {
+		return Paths.get(this.terraformExePath).toString();
+	}
+
+	public void setTerraformExePath(final String terraformExePath) {
+		this.terraformExePath = terraformExePath;
+	}
+
 	public String getDirectoryPath() {
 		return this.directoryPath;
 	}
@@ -22,7 +32,4 @@ public class GlobalProperties {
 		this.directoryPath = directoryPath;
 	}
 
-	public String getTerraformPath() throws IOException {
-		return new ClassPathResource("terraform.exe").getFile().getAbsolutePath(); // TODO
-	}
 }

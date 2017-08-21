@@ -1,4 +1,4 @@
-package com.glitterlabs.project.util;
+package com.glitterlabs.terraformui.util;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -8,7 +8,7 @@ import java.util.List;
 
 import org.apache.commons.lang3.StringUtils;
 
-import com.glitterlabs.project.model.Resource;
+import com.glitterlabs.terraformui.model.Resource;
 
 public class DirectoryUtil {
 

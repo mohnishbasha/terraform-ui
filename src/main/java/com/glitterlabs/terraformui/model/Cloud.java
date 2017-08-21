@@ -1,4 +1,4 @@
-package com.glitterlabs.project.model;
+package com.glitterlabs.terraformui.model;
 
 import java.util.Date;
 

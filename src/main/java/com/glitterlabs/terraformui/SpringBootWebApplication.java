@@ -1,4 +1,4 @@
-package com.glitterlabs.project;
+package com.glitterlabs.terraformui;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

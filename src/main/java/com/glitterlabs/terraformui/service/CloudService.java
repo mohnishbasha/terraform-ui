@@ -1,4 +1,4 @@
-package com.glitterlabs.project.service;
+package com.glitterlabs.terraformui.service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,8 +6,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.glitterlabs.project.dao.CloudRepository;
-import com.glitterlabs.project.model.Cloud;
+import com.glitterlabs.terraformui.dao.CloudRepository;
+import com.glitterlabs.terraformui.model.Cloud;
 
 @Service
 public class CloudService {

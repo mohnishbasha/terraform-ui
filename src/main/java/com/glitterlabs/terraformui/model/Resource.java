@@ -1,4 +1,4 @@
-package com.glitterlabs.project.model;
+package com.glitterlabs.terraformui.model;
 
 public class Resource {
 

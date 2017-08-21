@@ -1,11 +1,11 @@
-package com.glitterlabs.project.dao;
+package com.glitterlabs.terraformui.dao;
 
 import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.glitterlabs.project.model.Cloud;
-import com.glitterlabs.project.model.Project;
+import com.glitterlabs.terraformui.model.Cloud;
+import com.glitterlabs.terraformui.model.Project;
 
 /**
  * The Interface CloudProjectRepository.

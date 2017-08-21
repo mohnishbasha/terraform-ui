@@ -1,4 +1,4 @@
-package com.glitterlabs.project.controller;
+package com.glitterlabs.terraformui.controller;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -19,11 +19,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.glitterlabs.project.model.Project;
-import com.glitterlabs.project.model.Project.ProjectStatus;
-import com.glitterlabs.project.service.ProjectService;
-import com.glitterlabs.project.util.GlobalProperties;
-import com.glitterlabs.project.util.PollingMessage;
+import com.glitterlabs.terraformui.model.Project;
+import com.glitterlabs.terraformui.model.Project.ProjectStatus;
+import com.glitterlabs.terraformui.service.ProjectService;
+import com.glitterlabs.terraformui.util.GlobalProperties;
+import com.glitterlabs.terraformui.util.PollingMessage;
 import com.google.common.util.concurrent.Uninterruptibles;
 
 @RestController
@@ -64,7 +64,7 @@ public class ProjectController {
 			public void run() {
 				final Project project = ProjectController.this.projectService.findById(projectId);
 				try {
-					final String cmd = ProjectController.this.prop.getTerraformPath();
+					final String cmd = ProjectController.this.prop.getTerraformExePath();
 					final ProcessBuilder builder = new ProcessBuilder(cmd, "apply");
 					builder.directory(Paths.get(ProjectController.this.prop.getDirectoryPath(), project.getPath()).toFile());
 					final Process process = builder.start();

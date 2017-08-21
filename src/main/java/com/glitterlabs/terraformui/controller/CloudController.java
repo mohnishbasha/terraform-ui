@@ -1,4 +1,4 @@
-package com.glitterlabs.project.controller;
+package com.glitterlabs.terraformui.controller;
 
 import java.util.List;
 
@@ -7,8 +7,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.glitterlabs.project.model.Cloud;
-import com.glitterlabs.project.service.CloudService;
+import com.glitterlabs.terraformui.model.Cloud;
+import com.glitterlabs.terraformui.service.CloudService;
 
 @RestController
 public class CloudController {
