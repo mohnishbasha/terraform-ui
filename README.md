@@ -1,7 +1,7 @@
 # terraform-ui
 user interface to run terraform (tf) files.
 
-## How to run?
+## How to run from source ?
 
 * Download terraform binary from terraform.io
 * Place the terraform binary|executable (terraform|terraform.exe) path in global.properties (src/main/resources)
@@ -24,10 +24,20 @@ java -jar target/terraform-ui-X.X.jar
 ```
 http://localhost:8090/
 ```
+
 # System requirement
 * Java
 * Maven
 * Mysql
+
+
+## How to run as docker container ?
+* docker-compose build
+* docker-compose start
+
+
+# Questions
+* contact: mohinish_ce [@] yahoo dot com
 
 # Demo
 ![demo.gif](https://github.com/mohnishbasha/terraform-ui/blob/master/demo/demo.gif "demo")
