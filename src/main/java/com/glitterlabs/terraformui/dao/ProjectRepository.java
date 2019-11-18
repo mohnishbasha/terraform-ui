@@ -2,7 +2,7 @@ package com.glitterlabs.terraformui.dao;
 
 import java.util.List;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.glitterlabs.terraformui.model.Cloud;
 import com.glitterlabs.terraformui.model.Project;
@@ -10,7 +10,7 @@ import com.glitterlabs.terraformui.model.Project;
 /**
  * The Interface CloudProjectRepository.
  */
-public interface ProjectRepository extends CrudRepository<Project, Long> {
+public interface ProjectRepository extends JpaRepository<Project, Long> {
 
 	/**
 	 * Find by name.

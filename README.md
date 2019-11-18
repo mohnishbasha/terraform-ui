@@ -25,13 +25,16 @@ java -jar target/terraform-ui-X.X.jar
 http://localhost:8090/
 ```
 
-## How to run as docker container ?
-* TBD [working on this, will be out soon .. ]
-
 # System requirement
 * Java
 * Maven
 * Mysql
+
+
+## How to run as docker container ?
+* docker-compose build
+* docker-compose start
+
 
 # Questions
 * contact: mohinish_ce [@] yahoo dot com

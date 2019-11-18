@@ -13,11 +13,11 @@
         <appender-ref ref="STDOUT"/>
     </logger>
 
-    <logger name="com.mkyong" level="debug" additivity="false">
+    <logger name="com.glitterlabs" level="info" additivity="false">
         <appender-ref ref="STDOUT"/>
     </logger>
 
-    <root level="error">
+    <root level="info">
         <appender-ref ref="STDOUT"/>
     </root>
 

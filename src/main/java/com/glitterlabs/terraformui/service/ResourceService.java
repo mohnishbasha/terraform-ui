@@ -43,7 +43,7 @@ public class ResourceService {
 	 * @throws IOException Signals that an I/O exception has occurred.
 	 */
 	public void create(final String projectId, final String name, final String content, final String resourceType) throws IOException {
-		final Project project = this.dao.findOne(Long.valueOf(projectId));
+		final Project project = this.dao.getOne(Long.valueOf(projectId));
 		final Path path = Paths.get(this.prop.getDirectoryPath(), project.getPath(), name);
 		if (StringUtils.equalsIgnoreCase(resourceType, "file")) {
 			Files.createFile(path);
@@ -59,7 +59,7 @@ public class ResourceService {
 
 	public List<Resource> findAllResources(final String projectId, final String subpath) {
 		List<Resource> result = new ArrayList<>();
-		final Project project = this.dao.findOne(Long.valueOf(projectId));
+		final Project project = this.dao.getOne(Long.valueOf(projectId));
 		if (project != null) {
 			try {
 				result = DirectoryUtil.getResources(Paths.get(this.prop.getDirectoryPath(), project.getPath(), subpath));
@@ -71,7 +71,7 @@ public class ResourceService {
 	}
 
 	public String getResourceContent(final String projectId, final String resourcePath) throws IOException {
-		final Project project = this.dao.findOne(Long.valueOf(projectId));
+		final Project project = this.dao.getOne(Long.valueOf(projectId));
 		final Path path = Paths.get(this.prop.getDirectoryPath(), project.getPath(), resourcePath);
 		final byte[] bytes = Files.readAllBytes(path);
 		return new String(bytes);
