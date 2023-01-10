@@ -36,8 +36,5 @@ http://localhost:8090/
 * docker-compose start
 
 
-# Questions
-* contact: mohinish_ce [@] yahoo dot com
-
 # Demo
 ![demo.gif](https://github.com/mohnishbasha/terraform-ui/blob/master/demo/demo.gif "demo")
