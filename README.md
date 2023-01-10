@@ -8,7 +8,7 @@ user interface to run terraform (tf) files.
 * Provide the location of directory where files will be placed in global.properties (src/main/resources)
 #### Clone the version of terraform-ui you want to run.
 ```
-git clone https://github.com/mohnishbasha/terraform-ui.git
+git clone https://github.com/siddharthshankarpaul/terraform-ui.git
 ```
 #### change directory to the root of the project
 #### run below command from root of project to create the artifact
@@ -37,4 +37,4 @@ http://localhost:8090/
 
 
 # Demo
-![demo.gif](https://github.com/mohnishbasha/terraform-ui/blob/master/demo/demo.gif "demo")
+![demo.gif](https://github.com/siddharthshankarpaul/terraform-ui/blob/master/demo/demo.gif "demo")
