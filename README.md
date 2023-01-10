@@ -8,7 +8,7 @@ user interface to run terraform (tf) files.
 * Provide the location of directory where files will be placed in global.properties (src/main/resources)
 #### Clone the version of terraform-ui you want to run.
 ```
-git clone https://github.com/mohnishbasha/terraform-ui.git
+git clone https://github.com/siddharthshankarpaul/terraform-ui.git
 ```
 #### change directory to the root of the project
 #### run below command from root of project to create the artifact
@@ -25,16 +25,16 @@ java -jar target/terraform-ui-X.X.jar
 http://localhost:8090/
 ```
 
-## How to run as docker container ?
-* TBD [working on this, will be out soon .. ]
-
 # System requirement
 * Java
 * Maven
 * Mysql
 
-# Questions
-* contact: mohinish_ce [@] yahoo dot com
+
+## How to run as docker container ?
+* docker-compose build
+* docker-compose start
+
 
 # Demo
-![demo.gif](https://github.com/mohnishbasha/terraform-ui/blob/master/demo/demo.gif "demo")
+![demo.gif](https://github.com/siddharthshankarpaul/terraform-ui/blob/master/demo/demo.gif "demo")

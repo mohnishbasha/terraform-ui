@@ -59,7 +59,7 @@ public class ProjectService {
 	 * @return the project
 	 */
 	public Project findById(final Long projectId) {
-		return this.projectdao.findOne(projectId);
+		return this.projectdao.getOne(projectId);
 	}
 
 	/**
@@ -81,7 +81,7 @@ public class ProjectService {
 	}
 
 	public void updateStatus(final Long projectId, final ProjectStatus status) {
-		final Project project = this.projectdao.findOne(projectId);
+		final Project project = findById(projectId);
 		project.setStatus(status);
 		this.projectdao.save(project);
 	}
